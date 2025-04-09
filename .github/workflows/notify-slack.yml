@@ -3,14 +3,16 @@ name: Notify Slack on Push
 on: [push]
 
 jobs:
-  slack-notify:
+  notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send message to Slack
-        uses: slackapi/slack-github-action@v1.24.0
+      - uses: 8398a7/action-slack@v3
         with:
-          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
+          status: custom
+          fields: repo,message,commit,author,ref
+          custom_payload: |
             {
-              "text": "Push to branch `${{ github.ref_name }}` by `${{ github.actor }}` in repo `${{ github.repository }}`"
+              "text": "🚀 Push to *${{ github.ref_name }}* by *${{ github.actor }}* in `${{ github.repository }}`"
             }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
