@@ -13,6 +13,7 @@ function NavBar() {
           <li><a href="#">Services</a></li>
           <li><a href="#">Volunteers</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#" className="donate-btn">Donate</a></li>
         </ul>
       </div>

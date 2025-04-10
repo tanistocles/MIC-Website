@@ -193,6 +193,14 @@ html, body {
   font-size: 0.95rem;
 }
 
+.footer-social-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .hero h1 {
