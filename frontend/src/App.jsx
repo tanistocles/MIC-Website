@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import axios from "axios"
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import Slider from './components/Slider';
-import Services from './components/Services';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Admin from './components/admin/Admin';
+import HomePage from './components/HomePage';
 
 function App() {
   const [array, setArray] = useState([]);
@@ -23,11 +21,10 @@ function App() {
 
   return (
     <>
-      <Header />
-      <NavBar />
-      <Slider />  
-      <Services /> 
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </>
   )
 }
