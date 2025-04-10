@@ -21,9 +21,9 @@ function Footer() {
         </div>
         <div className="footer-section">
           <h4>Follow Us</h4>
-          <div className="social-links">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
+          <div className="footer-social-links">
+            <a href="#">Facebook<i className="fab fa-facebook"></i></a>
+            <a href="#">Youtube<i className="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
