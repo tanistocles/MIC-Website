@@ -23,7 +23,7 @@ function Footer() {
         <div className="footer-section">
           <h4>Follow Us</h4>
           <div className="footer-social-links">
-            <a href="#">Facebook<i className="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61567165705117">Facebook<i className="fab fa-facebook"></i></a>
             <a href="#">Youtube<i className="fab fa-youtube"></i></a>
           </div>
         </div>
