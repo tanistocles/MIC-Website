@@ -1,7 +1,7 @@
 import sqlite3 from "sqlite3";
 import { execute } from "./sql.js";
 
-export const createTable = async () => {
+const main = async () => {
   const db = new sqlite3.Database("micweb.db");
   try {
     await execute(
@@ -17,3 +17,5 @@ export const createTable = async () => {
     db.close();
   }
 };
+
+main();
