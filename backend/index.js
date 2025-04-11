@@ -1,3 +1,3 @@
-import sqlite3 from "sqlite3";
+import { createTable } from "./src/createtable.js";
 
-const db = new sqlite3.Database("micweb.db");
+createTable();
