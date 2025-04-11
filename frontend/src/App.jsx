@@ -3,7 +3,10 @@ import './App.css'
 import axios from "axios"
 import { Routes, Route } from 'react-router-dom';
 import Admin from './components/admin/Admin';
-import HomePage from './components/HomePage';
+import Home from './components/home/Home';
+import Contact from './components/contact/Contact';
+import About from './components/about/About';
+
 
 function App() {
   const [array, setArray] = useState([]);
@@ -22,8 +25,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   )

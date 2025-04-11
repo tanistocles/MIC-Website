@@ -1,4 +1,6 @@
 import React from 'react';
+import './shared-style.css'
+
 
 function Header() {
   return (

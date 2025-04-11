@@ -1,5 +1,7 @@
 import React from 'react';
-import banner from '../assets/banner.png'; // Make sure this path is correct
+import banner from '../../assets/banner.png'; // Make sure this path is correct
+import './shared-style.css'
+
 
 function Slider() {
   return (
