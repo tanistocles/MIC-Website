@@ -1,0 +1,64 @@
+/* Categories Page Specific Styles */
+.wrap {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 20px;
+    width: calc(100% - var(--sidebar-width));
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    }
+
+  .wp-list-table {
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    width: 80%;
+  }
+  
+  .wp-list-table th, 
+  .wp-list-table td {
+    padding: 6px 8px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f1;
+  }
+  
+  .check-column {
+    width: 2.2em;
+  }
+  
+  .column-name {
+    width: 30%;
+  }
+  
+  .column-slug {
+    width: 20%;
+  }
+  
+  .column-posts {
+    width: 15%;
+  }
+  
+  .column-actions {
+    width: 20%;
+  }
+  
+  .no-items {
+    text-align: center;
+    padding: 20px !important;
+    color: #646970;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 782px) {
+    .column-slug {
+      display: none;
+    }
+    
+    .column-name {
+      width: 40%;
+    }
+    
+    .column-actions {
+      width: 30%;
+    }
+  }
