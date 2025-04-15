@@ -1,0 +1,139 @@
+/* Posts Page Specific Styles */
+.wrap {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 20px;
+  width: calc(100% - var(--sidebar-width));
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  }
+  
+  .wp-heading-inline {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px;
+    display: inline-block;
+  }
+  
+  .page-title-action {
+    font-size: 13px;
+    margin-left: 4px;
+    padding: 4px 8px;
+    text-decoration: none;
+    border: 1px solid #2271b1;
+    border-radius: 2px;
+    background: #f6f7f7;
+    color: #2271b1;
+  }
+  
+  .page-title-action:hover {
+    background: #f0f0f1;
+  }
+  
+  .tablenav {
+    height: 30px;
+    margin: 15px 0;
+  }
+  
+  .bulkactions select {
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  
+  .search-box {
+    float: right;
+  }
+  
+  .search-box input {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  
+  .wp-list-table {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    width: 80%;
+    border-spacing: 0;
+  }
+  
+  .wp-list-table th, 
+  .wp-list-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f1;
+  }
+  
+  .check-column {
+    width: 2.2em;
+    padding: 10px 0 0 3px !important;
+  }
+  
+  .column-title {
+    width: 40%;
+  }
+  
+  .row-actions {
+    color: #646970;
+    font-size: 13px;
+    margin-top: 4px;
+    visibility: hidden;
+  }
+  
+  tr:hover .row-actions {
+    visibility: visible;
+  }
+  
+  .row-actions span {
+    margin-right: 4px;
+  }
+  
+  .button {
+    background: #f6f7f7;
+    border-color: #2271b1;
+    color: #2271b1;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background: #2271b1;
+    color: #fff;
+  }
+  
+  .tablenav-pages {
+    float: right;
+    margin: 0;
+    padding: 6px 0 0;
+  }
+  
+  .displaying-num {
+    font-size: 13px;
+    color: #646970;
+  }
+  
+  /* Status indicators */
+  .status-published {
+    color: #00a32a;
+  }
+  
+  .status-draft {
+    color: #dba617;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 782px) {
+    .column-tags,
+    .column-categories,
+    .column-author {
+      display: none;
+    }
+    
+    .column-title {
+      width: 60%;
+    }
+  }
