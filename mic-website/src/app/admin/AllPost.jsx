@@ -1,129 +1,131 @@
-import './AllPostStyle.css'
+import styles from './AllPostStyle.module.css';
 
 function AllPost() {
-  return(
+  return (
     <>
-      <div class="wrap">
-    <h1 class="wp-heading-inline">Posts</h1>
-    <a href="/posts/new" class="page-title-action">Add New</a>
+      <div className={styles.wrap}>
+        <h1 className={styles['wp-heading-inline']}>Posts</h1>
+        <a href="/posts/new" className={styles['page-title-action']}>Add New</a>
 
-    <div class="tablenav top">
-      <div class="alignleft actions">
-        <select class="post-status-filter">
-          <option value="all">All Statuses</option>
-          <option value="published">Published</option>
-          <option value="draft">Draft</option>
-          <option value="trash">Trash</option>
-        </select>
+        <div className={styles.tablenav + ' top'}>
+          <div className="alignleft actions">
+            <select className="post-status-filter">
+              <option value="all">All Statuses</option>
+              <option value="published">Published</option>
+              <option value="draft">Draft</option>
+              <option value="trash">Trash</option>
+            </select>
 
-        <select class="category-filter">
-          <option value="all">All</option>
-          <option value="uncategorized">Uncategorized</option>
-          <option value="tutorial">Tutorial</option>
-          <option value="news">News</option>
-        </select>
+            <select className="category-filter">
+              <option value="all">All</option>
+              <option value="uncategorized">Uncategorized</option>
+              <option value="tutorial">Tutorial</option>
+              <option value="news">News</option>
+            </select>
 
-        <button class="button">Filter</button>
+            <button className={styles.button}>Filter</button>
+          </div>
+
+          <div className={styles['search-box']}>
+            <input type="search" placeholder="Search posts..." />
+            <button className={styles.button}>Search</button>
+          </div>
+        </div>
+
+        <div className={styles.tablenav + ' top'}>
+          <div className={"alignleft actions " + styles.bulkactions}>
+            <select id="bulk-action-selector">
+              <option value="-1">Bulk Actions</option>
+              <option value="edit">Edit</option>
+              <option value="trash">Move to Trash</option>
+              <option value="publish">Publish</option>
+              <option value="draft">Draft</option>
+            </select>
+            <button className={styles.button + ' action'}>Apply</button>
+          </div>
+
+          <div className={styles['tablenav-pages']}>
+            <span className={styles['displaying-num']}>2 items</span>
+            <span className="pagination-links">
+              <button className={styles.button} disabled>←</button>
+              <span className="current-page">Page 1 of 1</span>
+              <button className={styles.button} disabled>→</button>
+            </span>
+          </div>
+        </div>
+
+        <table className={styles['wp-list-table'] + ' widefat fixed striped posts'}>
+          <thead>
+            <tr>
+              <th className={styles['check-column']}><input type="checkbox" /></th>
+              <th className={styles['column-title']}>Title</th>
+              <th className="column-author">Author</th>
+              <th className="column-categories">Categories</th>
+              <th className="column-tags">Tags</th>
+              <th className="column-date">Date</th>
+              <th className="column-status">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className={styles['status-published']}>
+              <th className={styles['check-column']}><input type="checkbox" /></th>
+              <td className={styles['column-title']}>
+                <strong><a href="/posts/edit/1">Hello World</a></strong>
+                <div className={styles['row-actions']}>
+                  <span className="edit"><a href="/posts/edit/1">Edit</a> | </span>
+                  <span className="trash"><button>Trash</button> | </span>
+                  <span className="view"><a href="/blog/1" target="_blank" rel="noopener noreferrer">View</a></span>
+                </div>
+              </td>
+              <td className="column-author">Admin</td>
+              <td className="column-categories">Uncategorized</td>
+              <td className="column-tags">welcome</td>
+              <td className="column-date">2025-04-14</td>
+              <td className="column-status"><span className="post-status published">Published</span></td>
+            </tr>
+            <tr className={styles['status-draft']}>
+              <th className={styles['check-column']}><input type="checkbox" /></th>
+              <td className={styles['column-title']}>
+                <strong><a href="/posts/edit/2">Getting Started with React</a></strong>
+                <div className={styles['row-actions']}>
+                  <span className="edit"><a href="/posts/edit/2">Edit</a> | </span>
+                  <span className="trash"><button>Trash</button> | </span>
+                  <span className="view"><a href="/blog/2" target="_blank" rel="noopener noreferrer">View</a></span>
+                </div>
+              </td>
+              <td className="column-author">Admin</td>
+              <td className="column-categories">Tutorial</td>
+              <td className="column-tags">react, javascript</td>
+              <td className="column-date">2025-04-14</td>
+              <td className="column-status"><span className="post-status draft">Draft</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div className={styles.tablenav + ' bottom'}>
+          <div className={"alignleft actions " + styles.bulkactions}>
+            <select id="bulk-action-selector-bottom">
+              <option value="-1">Bulk Actions</option>
+              <option value="edit">Edit</option>
+              <option value="trash">Move to Trash</option>
+              <option value="publish">Publish</option>
+              <option value="draft">Draft</option>
+            </select>
+            <button className={styles.button + ' action'}>Apply</button>
+          </div>
+
+          <div className={styles['tablenav-pages']}>
+            <span className={styles['displaying-num']}>2 items</span>
+            <span className="pagination-links">
+              <button className={styles.button} disabled>←</button>
+              <span className="current-page">Page 1 of 1</span>
+              <button className={styles.button} disabled>→</button>
+            </span>
+          </div>
+        </div>
       </div>
-
-      <div class="search-box">
-        <input type="search" placeholder="Search posts..."/>
-        <button class="button">Search</button>
-      </div>
-    </div>
-    <div class="tablenav top">
-      <div class="alignleft actions bulkactions">
-        <select id="bulk-action-selector">
-          <option value="-1">Bulk Actions</option>
-          <option value="edit">Edit</option>
-          <option value="trash">Move to Trash</option>
-          <option value="publish">Publish</option>
-          <option value="draft">Draft</option>
-        </select>
-        <button class="button action">Apply</button>
-      </div>
-
-      <div class="tablenav-pages">
-        <span class="displaying-num">2 items</span>
-        <span class="pagination-links">
-          <button class="button" disabled>←</button>
-          <span class="current-page">Page 1 of 1</span>
-          <button class="button" disabled>→</button>
-        </span>
-      </div>
-    </div>
-
-    <table class="wp-list-table widefat fixed striped posts">
-      <thead>
-        <tr>
-          <th class="check-column"><input type="checkbox"/></th>
-          <th class="column-title">Title</th>
-          <th class="column-author">Author</th>
-          <th class="column-categories">Categories</th>
-          <th class="column-tags">Tags</th>
-          <th class="column-date">Date</th>
-          <th class="column-status">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="status-published">
-          <th class="check-column"><input type="checkbox"/></th>
-          <td class="column-title">
-            <strong><a href="/posts/edit/1">Hello World</a></strong>
-            <div class="row-actions">
-              <span class="edit"><a href="/posts/edit/1">Edit</a> | </span>
-              <span class="trash"><button>Trash</button> | </span>
-              <span class="view"><a href="/blog/1" target="_blank" rel="noopener noreferrer">View</a></span>
-            </div>
-          </td>
-          <td class="column-author">Admin</td>
-          <td class="column-categories">Uncategorized</td>
-          <td class="column-tags">welcome</td>
-          <td class="column-date">2025-04-14</td>
-          <td class="column-status"><span class="post-status published">Published</span></td>
-        </tr>
-        <tr class="status-draft">
-          <th class="check-column"><input type="checkbox"/></th>
-          <td class="column-title">
-            <strong><a href="/posts/edit/2">Getting Started with React</a></strong>
-            <div class="row-actions">
-              <span class="edit"><a href="/posts/edit/2">Edit</a> | </span>
-              <span class="trash"><button>Trash</button> | </span>
-              <span class="view"><a href="/blog/2" target="_blank" rel="noopener noreferrer">View</a></span>
-            </div>
-          </td>
-          <td class="column-author">Admin</td>
-          <td class="column-categories">Tutorial</td>
-          <td class="column-tags">react, javascript</td>
-          <td class="column-date">2025-04-14</td>
-          <td class="column-status"><span class="post-status draft">Draft</span></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="tablenav bottom">
-      <div class="alignleft actions bulkactions">
-        <select id="bulk-action-selector-bottom">
-          <option value="-1">Bulk Actions</option>
-          <option value="edit">Edit</option>
-          <option value="trash">Move to Trash</option>
-          <option value="publish">Publish</option>
-          <option value="draft">Draft</option>
-        </select>
-        <button class="button action">Apply</button>
-      </div>
-
-      <div class="tablenav-pages">
-        <span class="displaying-num">2 items</span>
-        <span class="pagination-links">
-          <button class="button" disabled>←</button>
-          <span class="current-page">Page 1 of 1</span>
-          <button class="button" disabled>→</button>
-        </span>
-      </div>
-    </div>
-  </div>
     </>
-  )
+  );
 }
+
 export default AllPost;
