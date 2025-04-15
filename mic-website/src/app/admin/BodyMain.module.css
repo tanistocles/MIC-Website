@@ -1,0 +1,58 @@
+.container {
+    padding: 2rem;
+    max-width: 100%;
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 20px;
+    width: calc(100% - var(--sidebar-width));
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    
+  }
+
+.widgetsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.widget {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.widget h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.postTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.postTable th,
+.postTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.postTable th {
+    background: #f8f9f9;
+}
+
+@media (max-width: 480px) {
+    .postTable th,
+    .postTable td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .widget h2 {
+        font-size: 1em;
+    }
+}
