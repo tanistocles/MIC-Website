@@ -38,7 +38,6 @@ const Library = () => {
         <span className={styles.selectedCount}>0 items selected</span>
       </div>
 
-      {/* Static Grid View */}
       <div className={styles.gridView}>
         <div className={styles.gridItem}>
           <img src="/placeholder.jpg" alt="sunset.jpg" className={styles.thumbnail} />
@@ -68,10 +67,8 @@ const Library = () => {
             <span className={styles.itemSize}>2.4 MB</span>
           </div>
         </div>
-        {/* Add more static grid items here if needed */}
       </div>
 
-      {/* Optional Static Modal (hidden by default) */}
       {/*
       <div className={styles.modal}>
         <div className={styles.modalContent}>

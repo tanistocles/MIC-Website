@@ -6,7 +6,7 @@ import Link from 'next/link';
 import styles from './AllPostStyle.module.css';
 
 const AllPosts = () => {
-  // Mock data - replace with API calls
+  // Mock data
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -17,7 +17,6 @@ const AllPosts = () => {
       date: '16-04-2025',
       views: 1500
     },
-    // Add more posts...
   ]);
 
   const [selectedPosts, setSelectedPosts] = useState([]);
@@ -27,7 +26,6 @@ const AllPosts = () => {
   const [filterCategory, setFilterCategory] = useState('all');
   const postsPerPage = 10;
 
-  // Filtering and pagination logic
   const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = filterStatus === 'all' || post.status === filterStatus;
@@ -79,7 +77,6 @@ const AllPosts = () => {
         </Link>
       </div>
 
-      {/* Filters and Search */}
       <div className={styles.filters}>
         <select 
           className={styles.filterSelect}
@@ -113,7 +110,6 @@ const AllPosts = () => {
         </div>
       </div>
 
-      {/* Bulk Actions */}
       <div className={styles.bulkActions}>
         <select 
           className={styles.bulkSelect}
@@ -136,7 +132,6 @@ const AllPosts = () => {
         </span>
       </div>
 
-      {/* Posts Table */}
       <table className={styles.postsTable}>
         <thead>
           <tr>
@@ -201,7 +196,6 @@ const AllPosts = () => {
         </tbody>
       </table>
 
-      {/* Pagination */}
       <div className={styles.pagination}>
         <button
           className={styles.paginationButton}

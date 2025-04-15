@@ -86,11 +86,9 @@ const AllUsers = () => {
               </button>
             </td>
           </tr>
-          {/* Add more rows if needed */}
         </tbody>
       </table>
 
-      {/* Pagination */}
       <div className={styles.pagination}>
         <button className={styles.paginationButton} disabled>
           Previous

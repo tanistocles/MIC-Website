@@ -36,8 +36,10 @@ function MainPage() {
                 <input type="text" placeholder="Search..."/>
             </div>
             <div className="user-profile" ref={profileRef}>
-            <img src={logo} width="40px" height="40px"></img>
-            <span onClick={handleDropdownToggle}>Admin User</span>
+                <div class="profile-item">            
+                <img src={logo} width="40px" height="40px"></img>
+                <span onClick={handleDropdownToggle}>Admin User</span>
+            </div>
             <i className={`fas fa-chevron-down ${isDropdownOpen ? 'rotated' : ''}`}></i>
             <div className={`dropdown-admin ${isDropdownOpen ? 'visible' : ''}`} ref={dropdownRef}>
                 <li>Account Setting</li>

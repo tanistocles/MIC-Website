@@ -92,11 +92,9 @@ const FormList = () => {
               </button>
             </td>
           </tr>
-          {/* More rows can go here... */}
         </tbody>
       </table>
 
-      {/* Pagination */}
       <div className={styles.pagination}>
         <button className={styles.paginationButton} disabled>
           Previous

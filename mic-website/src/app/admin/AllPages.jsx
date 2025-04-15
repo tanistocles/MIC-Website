@@ -87,11 +87,9 @@ const AllPages = () => {
               </button>
             </td>
           </tr>
-          {/* Add more rows as needed */}
         </tbody>
       </table>
 
-      {/* Pagination */}
       <div className={styles.pagination}>
         <button className={styles.paginationButton} disabled>Previous</button>
         <span className={styles.pageInfo}>Page 1 of 1</span>

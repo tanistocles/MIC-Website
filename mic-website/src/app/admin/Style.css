@@ -23,7 +23,9 @@ body {
     background-color: #f0f0f1;
     flex-wrap: wrap;
 }
+.profile-item {
 
+}
 /* Sidebar Styles */
 .sidebar {
     width: var(--sidebar-width);
