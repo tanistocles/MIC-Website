@@ -98,11 +98,10 @@
 
 /* Table */
 .wp-list-table {
-  margin-left: 20px;
   background: #fff;
   border: 1px solid #c3c4c7;
   box-shadow: 0 1px 1px rgba(0,0,0,.04);
-  width: 80%;
+  width: 100%;
   border-spacing: 0;
 }
 
@@ -115,22 +114,27 @@
 
 .check-column {
   width: 2.2em;
+  text-align: left;
 }
 
 .column-name {
   width: 30%;
+  text-align: left;
 }
 
 .column-slug {
   width: 20%;
+  text-align: left;
 }
 
 .column-posts {
+  text-align: left;
   width: 15%;
 }
 
 .column-actions {
   width: 20%;
+  text-align: left;
 }
 
 .no-items {

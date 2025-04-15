@@ -3,7 +3,11 @@
     --sidebar-collapsed-width: 60px;
     --sidebar-bg: #1d2327;
     --primary-color: #2271b1;
-    --hover-color: #2c3338;
+    --hover-color: #135e96;
+    --danger-color: #dc3232;
+    --success-color: #46b450;
+    --warning-color: #ffb900;
+    --info-color: #00a0d2;
 }
 
 * {
