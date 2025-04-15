@@ -1,4 +1,4 @@
-import './details-style.css'
+import './Details.css'
 
 function Details (){
     return (
@@ -32,7 +32,7 @@ function Details (){
     
                 <label>
                   Message:
-                  <textarea name="message" rows="6" required />
+                  <textarea name="message" rows={6} required />
                 </label>
     
                 <button type="submit">Send Message</button>

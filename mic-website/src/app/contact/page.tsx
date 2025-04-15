@@ -1,5 +1,5 @@
 import { Header, Footer, NavBar, Slider } from '../ui';
-import Details from "./Details.jsx"
+import Details from "./Details"
 
 export default function Contact() {
     return(
