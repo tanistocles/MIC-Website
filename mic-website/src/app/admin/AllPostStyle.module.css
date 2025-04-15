@@ -1,0 +1,227 @@
+
+.container {
+  padding: 2rem;
+  background: #fff;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 20px;
+  width: calc(100% - var(--sidebar-width));
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.newPostButton {
+  background: #2271b1;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.newPostButton:hover {
+  background: #135e96;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: 0.5rem;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.searchBox {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #646970;
+}
+
+.bulkActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bulkSelect {
+  padding: 0.5rem;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+}
+
+.applyButton {
+  background: #2271b1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.applyButton:disabled {
+  background: #a0a5aa;
+  cursor: not-allowed;
+}
+
+.selectedCount {
+  color: #646970;
+  font-size: 0.9rem;
+}
+
+.postsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.postsTable th,
+.postsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f1;
+  text-align: left;
+}
+
+.postsTable th {
+  background-color: #f8f9f9;
+}
+
+.checkColumn {
+  width: 40px;
+  padding-left: 0 !important;
+}
+
+.titleColumn {
+  width: 30%;
+}
+
+.titleCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.postIcon {
+  color: #646970;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.status.published {
+  background: #46b450;
+  color: white;
+}
+
+.status.draft {
+  background: #ffb900;
+  color: black;
+}
+
+.status.trash {
+  background: #dc3232;
+  color: white;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.actionLink {
+  color: #2271b1;
+  text-decoration: none;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: #dc3232;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.paginationButton {
+  background: #f0f0f1;
+  border: 1px solid #dcdcde;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  color: #646970;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .postsTable {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .postsTable th,
+  .postsTable td {
+    white-space: nowrap;
+  }
+
+  .postsTable td:nth-child(3),
+  .postsTable th:nth-child(3),
+  .postsTable td:nth-child(4),
+  .postsTable th:nth-child(4) {
+    display: none;
+  }
+}

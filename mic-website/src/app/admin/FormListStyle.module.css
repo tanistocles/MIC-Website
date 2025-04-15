@@ -1,0 +1,257 @@
+.container {
+    padding: 2rem;
+    background: #fff;
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 20px;
+    width: calc(100% - var(--sidebar-width));
+    transition: margin-left 0.3s ease, width 0.3s ease;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .newFormButton {
+    background: #2271b1;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .newFormButton:hover {
+    background: #135e96;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filterGroup {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .filterSelect {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+  }
+  
+  .searchGroup {
+    flex: 2;
+  }
+  
+  .searchBox {
+    position: relative;
+    max-width: 400px;
+  }
+  
+  .searchBox input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #646970;
+  }
+  
+  .bulkActions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bulkSelect {
+    padding: 0.5rem;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    min-width: 200px;
+  }
+  
+  .applyButton {
+    background: #2271b1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .applyButton:disabled {
+    background: #a0a5aa;
+    cursor: not-allowed;
+  }
+  
+  .selectedCount {
+    color: #646970;
+    font-size: 0.9rem;
+  }
+  
+  .formsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formsTable th,
+  .formsTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f1;
+    text-align: left;
+  }
+  
+  .formsTable th {
+    background-color: #f8f9f9;
+  }
+  
+  .checkColumn {
+    width: 40px;
+    padding-left: 0 !important;
+  }
+  
+  .titleCell {
+    min-width: 200px;
+  }
+  
+  .formTitle {
+    color: #2271b1;
+    text-decoration: none;
+  }
+  
+  .formTitle:hover {
+    text-decoration: underline;
+  }
+  
+  .shortcodeCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .shortcode {
+    font-family: monospace;
+    background: #f0f0f1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+  }
+  
+  .copyButton {
+    background: none;
+    border: none;
+    color: #646970;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .copyButton:hover {
+    color: #2271b1;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+  }
+  
+  .status.published {
+    background: #46b450;
+    color: white;
+  }
+  
+  .status.draft {
+    background: #ffb900;
+    color: black;
+  }
+  
+  .status.trash {
+    background: #dc3232;
+    color: white;
+  }
+  
+  .actionsCell {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    background: none;
+    border: none;
+    color: #646970;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.3s ease;
+  }
+  
+  .actionButton:hover {
+    color: #2271b1;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .paginationButton {
+    background: #f0f0f1;
+    border: 1px solid #dcdcde;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pageInfo {
+    color: #646970;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .controls {
+      flex-direction: column;
+    }
+  
+    .formsTable {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .formsTable td:nth-child(4),
+    .formsTable th:nth-child(4),
+    .formsTable td:nth-child(5),
+    .formsTable th:nth-child(5) {
+      display: none;
+    }
+  }

@@ -45,7 +45,7 @@ function Navbar() {
                     <li className="menu-item">
                         <i className="fas fa-envelope"></i><span>Contact Form</span>
                         <ul className="submenu">
-                            <li className="submenu-item"><span>Create a new Form</span></li>
+                            <li className="submenu-item"><span>Form List</span></li>
                         </ul>
                     </li>
 

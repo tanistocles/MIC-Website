@@ -36,8 +36,10 @@ function MainPage() {
                 <input type="text" placeholder="Search..."/>
             </div>
             <div className="user-profile" ref={profileRef}>
-            <img src={logo} width="40px" height="40px"></img>
-            <span onClick={handleDropdownToggle}>Admin User</span>
+                <div class="profile-item">            
+                <img src={logo} width="40px" height="40px"></img>
+                <span onClick={handleDropdownToggle}>Admin User</span>
+            </div>
             <i className={`fas fa-chevron-down ${isDropdownOpen ? 'rotated' : ''}`}></i>
             <div className={`dropdown-admin ${isDropdownOpen ? 'visible' : ''}`} ref={dropdownRef}>
                 <li>Account Setting</li>
@@ -45,46 +47,6 @@ function MainPage() {
                 <li>Logout</li>
             </div>
         </div>
-        </div>
-        <div class="widgets-grid">
-            <div class="widget">
-                <h2>Quick Stats</h2>
-                <p>Posts: 12</p>
-                <p>Users: 5</p>
-                <p>Comments: 23</p>
-            </div>
-
-            <div class="widget">
-                <h2>Recent Posts</h2>
-                <table class="post-table">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sample Post 1</td>
-                            <td>Admin</td>
-                            <td>2024-03-20</td>
-                        </tr>
-                        <tr>
-                            <td>Sample Post 2</td>
-                            <td>Editor</td>
-                            <td>2024-03-19</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="widget">
-                <h2>System Info</h2>
-                <p>Version: 1.0.0</p>
-                <p>Theme: Default</p>
-                <p>Storage: 64MB / 1GB</p>
-            </div>
         </div>
     </main>
         </>
