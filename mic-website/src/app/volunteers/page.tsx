@@ -1,15 +1,14 @@
 import { Header, Footer, NavBar, Slider } from '../ui';
 
 function Volunteers() {
-    return(
+  return (
+    <div>
+      <Header />
+      <Slider />
+      <NavBar />
 
-        <div>
-            <Header/>
-            <Slider/>
-            <NavBar/>
-
-            <Footer/>
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
 export default Volunteers;

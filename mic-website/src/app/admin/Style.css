@@ -149,7 +149,138 @@ body {
 .post-table th {
     background: #f8f9f9;
 }
+/* Submenu Positioning */
+.submenu {
+    position: absolute;
+    left: 100%;       /* Push to right of parent */
+    top: 0;           /* Align with parent's top */
+    margin-top: -10px; /* Adjust to match parent's padding */
+    background: var(--sidebar-bg);
+    min-width: 220px;
+    list-style: none;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    z-index: 1001;
+    pointer-events: none;
+}
 
+.menu-item {
+    position: relative; /* Crucial for positioning */
+    padding: 12px 20px;
+}
+
+.menu-item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    margin-top: 0; /* Reset offset when visible */
+}
+
+/* Better alignment for nested items */
+.submenu-item {
+    padding: 12px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust icon spacing */
+.submenu-item i {
+    margin-right: 10px;
+    width: 20px;
+}
+/* Add these styles to your CSS */
+.submenu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    background: transparent;
+}
+
+/* Hover effect for submenu items */
+.submenu-item:hover {
+    background: var(--hover-color);
+    transform: translateX(5px);
+}
+
+/* Optional: Add a subtle left border on hover */
+.submenu-item:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--primary-color);
+    transition: width 0.2s ease;
+}
+
+/* Optional: Add icon animation */
+.submenu-item:hover i {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Transition for smooth effects */
+.submenu-item i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+/* Admin dropdown */
+.user-profile {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown container */
+.dropdown-admin {
+    list-style: none;
+    padding: 5px;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+/* Visible state */
+.dropdown-admin.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+/* Chevron rotation */
+.fa-chevron-down.rotated {
+    transform: rotate(180deg);
+}
+/* Keep existing transitions */
+.fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+/* Clickable span style */
+.user-profile span {
+    cursor: pointer;
+    user-select: none;
+}
+.dropdown-admin li:hover {
+    background: #f0f0f1;
+    transform: translateX(5px);
+}
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .submenu {
+        left: 100%;
+        top: 0;
+        min-width: 200px;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
@@ -186,8 +317,8 @@ body {
         font-size: 0.9em;
         padding: 8px;
     }
-
     .widget h2 {
         font-size: 1em;
     }
 }
+
