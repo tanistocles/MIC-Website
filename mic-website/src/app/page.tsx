@@ -1,5 +1,5 @@
 import { Header, Footer, NavBar, Slider } from './ui';
-import Services from './home/Services';
+import News from './home/News';
 
 function Home() {
     return(
@@ -8,7 +8,7 @@ function Home() {
             <Header/>
             <Slider/>
             <NavBar/>
-            <Services/>
+            <News/>
             <Footer/>
         </div>
     )

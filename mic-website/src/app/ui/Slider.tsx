@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import './shared-style.css'
+import './Shared.css'
 
 
 function Slider() {

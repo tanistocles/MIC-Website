@@ -1,5 +1,5 @@
-import './shared-style.css'
 
+import './Shared.css'
 
 function Header() {
   return (
