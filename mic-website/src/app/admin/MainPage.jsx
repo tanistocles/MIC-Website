@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
-import logo from '/public/logo.jpg';
+import Image from "next/image";
 
 function MainPage() {
 
@@ -37,7 +37,7 @@ function MainPage() {
             </div>
             <div className="user-profile" ref={profileRef}>
                 <div class="profile-item">            
-                <img src={logo} width="40px" height="40px"></img>
+                <Image src="/logo.jpg" width={40} height={40}></Image>
                 <span onClick={handleDropdownToggle}>Admin User</span>
             </div>
             <i className={`fas fa-chevron-down ${isDropdownOpen ? 'rotated' : ''}`}></i>
