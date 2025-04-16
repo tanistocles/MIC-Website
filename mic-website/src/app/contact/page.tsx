@@ -6,8 +6,9 @@ export default function Contact() {
 
         <div>
             <Header/>
-            <Slider/>
             <NavBar/>
+            <Slider/>
+
             <Details/>
             <Footer/>
         </div>

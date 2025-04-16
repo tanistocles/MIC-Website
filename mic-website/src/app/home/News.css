@@ -23,3 +23,33 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
+
+  .home-card h3 {
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .home-grid {
+    display: flex;             /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap;         /* Prevent items from wrapping to a new line */
+    justify-content: center;   /* Center the grid items within the container */
+    align-items: stretch;      /* Make all cards stretch to the same height (adjust if needed) */
+    gap: 20px;                 /* Add space between cards */
+    width: 80%;                /* Adjust or set a fixed width as desired */
+    max-width: 1200px;         /* Maximum width for larger screens */
+    margin: 0 auto;            /* Centers the container horizontally on the page */
+    padding: 20px;             /* Optional: adds inner padding to the container */
+    box-sizing: border-box;    /* Ensure padding is included in width calculations */
+    border: 1px solid #ccc;    /* Optional: visual border for the container */
+  }
+  
+  .home-card {
+    flex: 1;                   /* Distribute available space equally among the cards */
+    padding: 1rem;             /* Add some inner spacing */
+    background-color: #f0f0f0; /* A light background color for visual separation */
+    border: 1px solid #ddd;    /* Optional border for each card */
+    text-align: center;        /* Center the text inside each card */
+    box-sizing: border-box;    /* Includes padding and border in the element’s total width and height */
+  }
+  

@@ -4,8 +4,9 @@ function Volunteers() {
   return (
     <div>
       <Header />
-      <Slider />
       <NavBar />
+      <Slider />
+
 
       <Footer />
     </div>
