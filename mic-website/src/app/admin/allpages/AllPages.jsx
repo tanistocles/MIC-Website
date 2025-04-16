@@ -68,15 +68,15 @@ const AllPages = () => {
             </td>
             <td className={styles.titleCell}>
               <FontAwesomeIcon icon={faFile} className={styles.pageIcon} />
-              <Link href="/pages/edit/1" className={styles.pageTitle}>Home Page</Link>
-              <span className={styles.pageSlug}>/home</span>
+              <Link href="/pages/edit/1" className={styles.pageTitle}>About Us</Link>
+              <span className={styles.pageSlug}>/about</span>
             </td>
             <td>Admin</td>
             <td>
               <span className={`${styles.status} ${styles.published}`}>published</span>
             </td>
             <td>Default</td>
-            <td>2023-10-01</td>
+            <td>2025-17-04</td>
             <td>1,500</td>
             <td className={styles.actionsCell}>
               <Link href="/pages/edit/1" className={styles.actionButton}>
