@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function Navbar() {
     return (
         <>
@@ -27,7 +27,7 @@ function Navbar() {
                     <li className="menu-item">
                         <i className="fas fa-image"></i><span>Media</span>
                         <ul className="submenu">
-                            <li className="submenu-item"><span>Library</span></li>
+                            <li className="submenu-item"><Link href="admin/library"><span>Library</span></Link></li>
                             <li className="submenu-item"><span>Add new file</span></li>
                         </ul>
                     </li>
