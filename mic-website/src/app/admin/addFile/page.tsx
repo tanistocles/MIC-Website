@@ -1,5 +1,5 @@
 import AddNewFilePage from './AddNewFile';
-import './AllPagesStyle.module.css';
+import './AddNewFileStyle.module.css';
 
 function AddNewFile() {
   return (

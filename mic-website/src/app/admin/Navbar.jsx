@@ -27,7 +27,7 @@ function Navbar() {
                     <li className="menu-item">
                         <i className="fas fa-image"></i><span>Media</span>
                         <ul className="submenu">
-                            <li className="submenu-item"><Link href="admin/library"><span>Library</span></Link></li>
+                            <li className="submenu-item"><Link href="/admin/library"><span>Library</span></Link></li>
                             <li className="submenu-item"><Link href="/admin/addfile"><span>Add new file</span></Link></li>
                         </ul>
                     </li>
