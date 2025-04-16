@@ -5,8 +5,9 @@ function Services() {
 
         <div>
             <Header/>
-            <Slider/>
             <NavBar/>
+            <Slider/>
+
 
             <Footer/>
         </div>
