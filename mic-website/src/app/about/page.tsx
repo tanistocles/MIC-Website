@@ -6,8 +6,9 @@ export default function About() {
 
         <div>
             <Header/>
-            <Slider/>
             <NavBar/>
+            <Slider/>
+
             <Info/>
             <Footer/>
         </div>

@@ -10,6 +10,10 @@ function Footer() {
             Physical Address<br />
             2 Peck Street, Taita, Lower Hutt
           </p>
+          <p>
+            Charity Number<br />
+            XXX-XXX-XXX
+          </p>
         </div>
         <div className="footer-section">
           <h4>Quick Links</h4>

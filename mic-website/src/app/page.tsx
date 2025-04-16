@@ -6,8 +6,9 @@ function Home() {
 
         <div>
             <Header/>
-            <Slider/>
             <NavBar/>
+            <Slider/>
+
             <News/>
             <Footer/>
         </div>
