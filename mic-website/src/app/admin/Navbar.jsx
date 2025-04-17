@@ -37,7 +37,7 @@ function Navbar() {
                         <i className="fas fa-file"></i><span>Page</span>
                         <ul className="submenu">
                             <li className="submenu-item"><Link href="/admin/allpages"><span>All Pages</span></Link></li>
-                            <li className="submenu-item"><span>Add New Page</span></li>
+                            <li className="submenu-item"><Link href="/admin/addpage"><span>Add New Page</span></Link></li>
                         </ul>
                     </li>
 
@@ -46,6 +46,7 @@ function Navbar() {
                         <i className="fas fa-envelope"></i><span>Contact Form</span>
                         <ul className="submenu">
                             <li className="submenu-item"><Link href="/admin/form"><span>Form List</span></Link></li>
+                            <li className="submenu-item"><Link href="/admin/create-form"><span>Create Form</span></Link></li>
                         </ul>
                     </li>
 
@@ -66,7 +67,7 @@ function Navbar() {
                         <i className="fas fa-users"></i><span>Users</span>
                         <ul className="submenu">
                             <li className="submenu-item"><Link href="/admin/allusers" ><span>All Users</span></Link></li>
-                            <li className="submenu-item"><span>Add new User</span></li>
+                            <li className="submenu-item"><Link href="/admin/adduser"><span>Add new User</span></Link></li>
                         </ul>
                     </li>
                 </ul>

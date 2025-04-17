@@ -4,17 +4,17 @@ function BodyMain() {
     return (
         <>
         <div className={styles.container}>
-        <div class={styles.widgetsGrid}>
-            <div class={styles.widget}>
+        <div className={styles.widgetsGrid}>
+            <div className={styles.widget}>
                 <h2>Quick Stats</h2>
                 <p>Posts: 12</p>
                 <p>Users: 5</p>
                 <p>Comments: 23</p>
             </div>
 
-            <div class={styles.widget}>
+            <div className={styles.widget}>
                 <h2>Recent Posts</h2>
-                <table class={styles.postTable}>
+                <table className={styles.postTable}>
                     <thead>
                         <tr>
                             <th>Title</th>
@@ -37,7 +37,7 @@ function BodyMain() {
                 </table>
             </div>
 
-            <div class={styles.widget}>
+            <div className={styles.widget}>
                 <h2>System Info</h2>
                 <p>Version: 1.0.0</p>
                 <p>Theme: Default</p>

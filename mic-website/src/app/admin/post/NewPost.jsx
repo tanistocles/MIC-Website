@@ -10,39 +10,36 @@ const NewPost = () => {
       <form className={styles.postForm}>
         {/* Title Input */}
         <div className={styles.formGroup}>
-        <div>
-        <input
-            type="text"
-            placeholder="Post Title"
-            className={styles.titleInput}
-            required
-          />
-        </div>
+          <div>
+          <input
+              type="text"
+              placeholder="Post Title"
+              className={styles.titleInput}
+              required
+            />
+          </div>
           {/* Content Editor */}
-        <div className={styles.editorContainer}>
-          <Editor
-            apiKey="lvnj10b6n3kpc1bnub1q8c16tjx6lclynrrzsy0kyg9vqwrx"
-            initialValue=""
-            init={{
-              height: 700,
-              width: 1000,
-              menubar: true,
-              plugins: [
-                'advlist autolink lists link image charmap print preview anchor',
-                'searchreplace visualblocks code fullscreen',
-                'insertdatetime media table paste code help wordcount'
-              ],
-              toolbar: 'undo redo | formatselect | bold italic backcolor | \
-                        alignleft aligncenter alignright alignjustify | \
-                        bullist numlist outdent indent | removeformat | help',
-              content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-            }}
-          />
+            <div className={styles.editorContainer}>
+              <Editor
+                apiKey="lvnj10b6n3kpc1bnub1q8c16tjx6lclynrrzsy0kyg9vqwrx"
+                initialValue=""
+                init={{
+                  height: 700,
+                  width: 1000,
+                  menubar: true,
+                  plugins: [
+                    'advlist autolink lists link image charmap print preview anchor',
+                    'searchreplace visualblocks code fullscreen',
+                    'insertdatetime media table paste code help wordcount'
+                  ],
+                  toolbar: 'undo redo | formatselect | bold italic backcolor | \
+                            alignleft aligncenter alignright alignjustify | \
+                            bullist numlist outdent indent | removeformat | help',
+                  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                }}
+              />
+            </div>
         </div>
-        </div>
-
-        
-
         {/* Sidebar */}
         <div className={styles.sidebar}>
           {/* Featured Image */}
@@ -67,7 +64,7 @@ const NewPost = () => {
           <div className={styles.sidebarSection}>
             <h3>Categories</h3>
             <div className={styles.categoryList}>
-              {['Technology', 'Lifestyle', 'Travel', 'Business'].map(category => (
+              {['Comminity', 'Charity', 'Education', 'Training'].map(category => (
                 <label key={category} className={styles.categoryLabel}>
                   <input type="checkbox" />
                   {category}
