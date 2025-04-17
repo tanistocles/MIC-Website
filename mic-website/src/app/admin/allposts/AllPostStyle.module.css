@@ -5,7 +5,6 @@
   min-height: 100vh;
   margin-left: var(--sidebar-width);
   flex: 1;
-  padding: 20px;
   width: calc(100% - var(--sidebar-width));
   transition: margin-left 0.3s ease, width 0.3s ease;
 }

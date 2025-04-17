@@ -50,8 +50,8 @@ function Category() {
           <tbody>
             <tr>
               <th className={styles['check-column']}><input type="checkbox" /></th>
-              <td className={styles['column-name']}><strong>News</strong></td>
-              <td className={styles['column-slug']}>news</td>
+              <td className={styles['column-name']}><strong>Community</strong></td>
+              <td className={styles['column-slug']}>community</td>
               <td className={styles['column-posts']}>15</td>
               <td className={styles['column-actions']}>
                 <button type="button" className={styles.button}>Edit</button>
@@ -60,8 +60,8 @@ function Category() {
             </tr>
             <tr>
               <th className={styles['check-column']}><input type="checkbox" /></th>
-              <td className={styles['column-name']}><strong>Tutorials</strong></td>
-              <td className={styles['column-slug']}>tutorials</td>
+              <td className={styles['column-name']}><strong>Education</strong></td>
+              <td className={styles['column-slug']}>education</td>
               <td className={styles['column-posts']}>28</td>
               <td className={styles['column-actions']}>
                 <button type="button" className={styles.button}>Edit</button>
