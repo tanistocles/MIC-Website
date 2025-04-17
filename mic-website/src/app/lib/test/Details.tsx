@@ -1,12 +1,15 @@
 import './Details.css'
-import { fetchContacts } from "../data";
-import path from "path";
+import { fetchContactId } from "../db-utils";
 
 export default async function Details (){
 
-  //const data = path.resolve("./micweb.db");
-  const contacts = JSON.stringify(await fetchContacts());
-
+  const phoneJson = await fetchContactId(1);
+  const emailJson = await fetchContactId(2);
+  const addressJson = await fetchContactId(3);
+  const phone = phoneJson.description;
+  const email = emailJson.description;
+  const address = addressJson.description;
+  
   return (
         <div className="contact-page">
           <h1>Contact Us</h1>
@@ -48,14 +51,13 @@ export default async function Details (){
             {/* Right Column: Contact Details */}
             <div className="contact-info">
               <h2>Migration Information Centre</h2>
-              <p><strong>Phone:</strong> (+64) 210 827 1234</p>
-              <p><strong>Email:</strong> <a href="mailto:Thi.phan.nz@gmail.com">Thi.phan.nz@gmail.com</a></p>
+              <p><strong>Phone:</strong> {phone}</p>
+              <p><strong>Email:</strong> <a href="mailto:Thi.phan.nz@gmail.com">{email}</a></p>
               <p><strong>Address:</strong><br />
-                2 Peck Street, Taita, Lower Hutt<br />
-                Wellington 5011
+                {address}<br />
               </p>
               <p><strong>Postal Address:</strong><br />
-                {contacts}<br />
+                TBA<br />
                 TBA
               </p>
               <p><strong>Opening Hours:</strong><br />
