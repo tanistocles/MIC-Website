@@ -1,5 +1,4 @@
 .container {
-    padding: 2rem;
     max-width: 100%;
     margin-left: var(--sidebar-width);
     flex: 1;
