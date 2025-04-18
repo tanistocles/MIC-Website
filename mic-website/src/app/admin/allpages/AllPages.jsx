@@ -68,8 +68,8 @@ const AllPages = () => {
             </td>
             <td className={styles.titleCell}>
               <FontAwesomeIcon icon={faFile} className={styles.pageIcon} />
-              <Link href="/pages/edit/1" className={styles.pageTitle}>About Us</Link>
-              <span className={styles.pageSlug}>/about</span>
+              <Link href="allpages/edit-contact-us" className={styles.pageTitle}>Contact Us</Link>
+              <span className={styles.pageSlug}>/contact-us</span>
             </td>
             <td>Admin</td>
             <td>
@@ -79,7 +79,7 @@ const AllPages = () => {
             <td>2025-17-04</td>
             <td>1,500</td>
             <td className={styles.actionsCell}>
-              <Link href="/pages/edit/1" className={styles.actionButton}>
+              <Link href="allpages/edit-contact-us" className={styles.actionButton}>
                 <FontAwesomeIcon icon={faEdit} />
               </Link>
               <button className={styles.actionButton}>
